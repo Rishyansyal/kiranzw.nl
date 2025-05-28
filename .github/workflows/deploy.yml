@@ -36,4 +36,5 @@ jobs:
         env:
           SSHPASS: ${{ secrets.SERVER_PASSWORD }}
         run: |
-          sshpass -e ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 'cd /c/Users/RKSGK/docker-websites && docker compose up -d --build'
+          sshpass -e ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} "cd C:\\Users\\RKSGK\\docker-websites && docker compose up -d --build"
+          
