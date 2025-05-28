@@ -1,0 +1,21 @@
+name: Deploy website via SCP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install sshpass
+        run: sudo apt-get update && sudo apt-get install -y sshpass
+
+      - name: Upload HTML files via SCP (met wachtwoord)
+        env:
+          SSHPASS: ${{ secrets.SERVER_PASSWORD }}
+        run: |
+          sshpass -e scp -o StrictHostKeyChecking=no -r ./ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:"C:/Users/RKSGK/docker-websites/Websites/kiranzw.nl"
