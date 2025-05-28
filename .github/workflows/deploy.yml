@@ -31,3 +31,9 @@ jobs:
           SSHPASS: ${{ secrets.SERVER_PASSWORD }}
         run: |
           sshpass -e scp -o StrictHostKeyChecking=no -r deploy/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:"C:/Users/RKSGK/docker-websites/Websites/kiranzw.nl"
+        
+      - name: Docker Compose restart op server
+        env:
+          SSHPASS: ${{ secrets.SERVER_PASSWORD }}
+        run: |
+          sshpass -e ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 'cd /c/Users/RKSGK/docker-websites && docker compose up -d --build'
