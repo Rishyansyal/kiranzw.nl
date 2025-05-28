@@ -14,8 +14,20 @@ jobs:
       - name: Install sshpass
         run: sudo apt-get update && sudo apt-get install -y sshpass
 
-      - name: Upload HTML files via SCP (met wachtwoord)
+      - name: Prepare deploy folder (zonder .git)
+        run: |
+          mkdir deploy
+          shopt -s extglob
+          cp -r !(deploy|.git|.github) deploy/
+
+      - name: Remove target folder op server
         env:
           SSHPASS: ${{ secrets.SERVER_PASSWORD }}
         run: |
-          sshpass -e scp -o StrictHostKeyChecking=no -r ./ ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:"C:/Users/RKSGK/docker-websites/Websites/kiranzw.nl"
+          sshpass -e ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }} 'rmdir /S /Q "C:\Users\RKSGK\docker-websites\Websites\kiranzw.nl" && mkdir "C:\Users\RKSGK\docker-websites\Websites\kiranzw.nl"'
+
+      - name: Upload website (zonder .git)
+        env:
+          SSHPASS: ${{ secrets.SERVER_PASSWORD }}
+        run: |
+          sshpass -e scp -o StrictHostKeyChecking=no -r deploy/* ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_HOST }}:"C:/Users/RKSGK/docker-websites/Websites/kiranzw.nl"
