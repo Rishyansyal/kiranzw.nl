@@ -5,6 +5,7 @@
     background-color: #f4f4f4;
     color: #333;
 }
+
 header {
     background-color: #ff0082;
     color: #fff;
@@ -12,152 +13,54 @@ header {
     z-index: 1000; /* Ensure the navbar is on top */
     position: relative; /* Required for z-index to work */
 }
+
 header .navbar-nav .nav-link {
     color: #fff;
     font-weight: bold;
 }
+
 header .navbar-nav .nav-link.btn {
     background-color: #fff;
-    color: #ff0082;
+    color: #6f2381;
     border-radius: 20px;
     padding: 0.5rem 1rem;
-
 }
+
 .hero {
     background: url('src/img/Banner.png') no-repeat center center;
-    background-size: 50%; /* Adjust the percentage to zoom in more or less */
+    background-size: 100%; /* Adjust the percentage to zoom in more or less */
     color: white;
     padding: 5rem 0;
     z-index: 1; /* Ensure the hero section is below the navbar */
     position: relative; /* Required for z-index to work */
+
 }
+
 h2 {
-    color: #ff0082;
+    color: #6f2381;
     margin-bottom: 2rem;
 }
+
 section {
     margin-bottom: 2rem;
 }
+
+.textkleur {
+    color: #f9b233; !important;
+}
+
+
+.carousel-inner img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain; /* Behoudt de afbeelding zonder te veel bijsnijden */
+    display: block;
+}
+
 .card {
     margin-bottom: 2rem;
     border: none;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.card-img-top {
-    border-radius: 5px;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-.card-body {
-    text-align: center;
-}
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
-footer a {
-    color: #fff;
-    font-size: 1.2rem;
-}
-.logo-small {
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
-}
-.hero h2 {
-    color: #ffffff; /* Example color: Green */
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-.hero p {
-    color: #ffffff; /* Dark gray color for better readability */
-    font-size: 1.25rem;
-    margin-top: 1rem;
-}
-.card-title {
-    color: #ff0082;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-.card-text {
-    color: #666;
-    font-size: 1rem;
-}
-.card-img-top {
-    border-radius: 5px;
-    width: 100%;
-    height: 200px;
-    object-fit: contain;
-}
-footer {
-    color: #fff;
-    text-align: center;
-    padding: 3rem 0;
-}
-footer h5 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-footer p {
-    margin: 0.5rem 0;
-}
-footer a {
-    color: #fff;
-    font-size: 1.2rem;
-    transition: color 0.3s;
-}
-footer a:hover {
-    color: #ff0082;
-}
-footer hr {
-    border-top: 1px solid #fff;
-    margin: 2rem 0;
-}
-.small-carousel .carousel-inner img {
-    max-width: 30%;
-    margin: 0 auto;
-}
-.small-carousel .carousel-control-prev-icon,
-.small-carousel .carousel-control-next-icon {
-    width: 30px;
-    height: 30px;
-    background-color: black;
-    background-size: 100%;
-}
-
-.img-fluid logo-small{
-    max-width: 40%;
-    height: auto;
-}
-
-/* Voeg deze CSS toe aan je styles.css bestand */
-body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
-    color: #333;
-}
-
-header {
-  /*  background: linear-gradient(1000deg, #FFFFFF, #3365d6); */
-    color: white;
-    padding: 1rem 0;
-}
-
-.navbar-nav {
-    display: flex;
-    justify-content: center; /* Center the navbar links */
-}
-
-.hero {
-    background: url('src/img/Banner.png') no-repeat center center/cover;
-    color: white;
-    padding: 5rem 0;
-}
-
-.card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
@@ -165,64 +68,58 @@ header {
     transform: translateY(-10px);
 }
 
+.card-img-top {
+    border-radius: 5px;
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.card-body {
+    text-align: center;
+}
+
 footer {
-    background: #333;
-    color: white;
-    padding: 2rem 0;
-}
-
-/* Voeg deze CSS toe aan je styles.css bestand */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-[data-aos] {
-    animation: fadeIn 1s ease-in-out;
-}
-
-/* Voeg deze CSS toe aan je styles.css bestand */
-:root {
-    --primary-color: #ff0082 ;
-    --secondary-color: #182848;
-    --accent-color: #f4b400;
-}
-
-body {
-    background-color: #f9f9f9;
-}
-
-a {
-    color: var(--primary-color);
-}
-
-a:hover {
-    color: var(--accent-color);
-}
-
-.kleur {
-    background-color: #ff0082 !important;
-    background: url("src/img/banner-voor-een_65689104.png") no-repeat center center; !important;
-    background-size: cover;
-    height: 200px; /* Adjust the height as needed */
-}
-
-.btn-newsletter {
-    background-color: #007bff;
+    background-color: #333;
     color: #fff;
-    padding: 15px 30px;
-    font-size: 1.25rem;
-    border-radius: 50px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    padding: 3rem 0;
 }
 
-.btn-newsletter:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+footer h5 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+footer a {
+    color: #fff;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff0082;
+}
+
+footer hr {
+    border-top: 1px solid #fff;
+    margin: 2rem 0;
+}
+
+.hero h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    color: #ffffff;
+    font-size: 1.25rem;
+    margin-top: 1rem;
 }
 
 .cookie-consent {
@@ -242,9 +139,61 @@ a:hover {
     max-width: 500px;
     margin: 0 auto;
 }
-
 .cookie-consent button {
     margin-top: 10px;
+}
+
+/* Root Variable Colors */
+:root {
+    --primary-color: #6f2381;
+    --secondary-color: #182848;
+    --accent-color: #f4b400;
+}
+
+/* AOS Animations */
+[data-aos] {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Global link styles */
+a {
+    color: var(--primary-color);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+/* Button Styles */
+.btn-newsletter {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-newsletter:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Hero Section */
+.kleur {
+    background-color: #ff0082;
+    background: url("src/img/banner-voor-een_65689104.png") no-repeat center center;
+    background-size: cover;
+    height: 300px;
 }
 
 .photo-container {
@@ -259,42 +208,23 @@ a:hover {
     height: auto;
 }
 
-.names {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
-}
-
-.names span {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-.textkleur{
-    color: #ffffff; !important;
-    text-decoration-color: white; !important;
-}
-
+/* Navbar styles */
 .navbar-nav {
     display: flex;
-    justify-content: center; /* Center the navbar links horizontally */
-    align-items: center; /* Center the navbar links vertically */
+    justify-content: center;
+    align-items: center;
 }
-
 
 .navbar-nav .nav-link {
-    color: #ff0082 !important; /* Change text color to black */
-    font-size: 1.25rem; /* Increase font size */
+    color: #6f2381 !important;
+    font-size: 1.25rem;
 }
-
-.positie{
-justify-content: flex-start}
 
 .navbar-dark .navbar-toggler-icon {
     background-image: url('src/img/menu-svgrepo-com.svg');
 }
 
+/* Overlay Menu */
 .menu-overlay {
     display: none;
     position: fixed;
@@ -306,6 +236,10 @@ justify-content: flex-start}
     z-index: 999;
     justify-content: center;
     align-items: center;
+}
+
+main {
+    !important; background-color: #fbedff;
 }
 
 .overlay-menu {
@@ -327,4 +261,67 @@ justify-content: flex-start}
     color: white;
     font-size: 24px;
     text-decoration: none;
+}
+
+
+/* Zorg voor een betere weergave op mobiele apparaten (max 576px) */
+@media (max-width: 576px) {
+    header {
+        padding: 10px 5px; /* Verminder de padding */
+        text-align: center;
+    }
+
+    /* Maak navbar-links groter en duidelijker */
+    .navbar-nav .nav-link {
+        font-size: 1rem; /* Iets grotere tekst */
+        padding: 10px; /* Extra ruimte tussen links */
+    }
+
+    .navbar-toggler-icon {
+        width: 40px;
+        height: 40px; /* Vergroot de menu-icoon */
+    }
+
+    /* Hero sectie aanpassen voor betere weergave */
+    .hero {
+        padding: 3rem 1rem; /* Minder padding, meer ruimte */
+        background-size: cover; /* Zorg ervoor dat de afbeelding de sectie opvult */
+        text-align: center; /* Centreren van tekst */
+    }
+
+    .hero h2 {
+        font-size: 1.8rem; /* Kleinere tekstgrootte */
+        margin-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 1rem; /* Kleinere paragrafen */
+    }
+
+    /* Zorg dat dropdown-menu goed leesbaar is */
+    .dropdown-menu {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    /* Menu-overlay responsief aanpassen */
+    .menu-overlay {
+        align-items: flex-start; /* Maak het menu overzichtelijk bovenin */
+        padding-top: 100px; /* Voeg ruimte bovenin toe */
+    }
+}
+
+/* Extra optimalisatie voor iets bredere apparaten (max 768px) */
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 1.1rem; /* Maak tekst iets kleiner op tablets */
+    }
+
+    .hero h2 {
+        font-size: 2rem; /* Geef tekst meer prominente weergave */
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
 }

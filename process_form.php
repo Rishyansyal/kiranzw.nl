@@ -16,4 +16,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo json_encode(["status" => "error", "message" => "Er is een fout opgetreden bij het verzenden van het bericht."]);
     }
 }
+document.addEventListener('DOMContentLoaded', function () {
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var menuOverlay = document.getElementById('menuOverlay');
+    var navbarCollapse = document.getElementById('navbarNav');
+
+    navbarToggler.addEventListener('click', function () {
+        if (navbarCollapse.classList.contains('show')) {
+            menuOverlay.style.display = 'none';
+        } else {
+            menuOverlay.style.display = 'block';
+        }
+    });
+
+    menuOverlay.addEventListener('click', function () {
+        menuOverlay.style.display = 'none';
+        navbarCollapse.classList.remove('show');
+    });
+});
 ?>
+
